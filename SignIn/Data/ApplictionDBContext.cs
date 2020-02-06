@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using Oracle.ManagedDataAccess.Client;
+﻿using Microsoft.EntityFrameworkCore;
 using SignIn.Models;
-using System.Data;
 
 namespace SignIn.Data
 {
@@ -15,7 +9,7 @@ namespace SignIn.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseOracle(@"DATA SOURCE=odapri1:1521/prfd;PASSWORD=testfirst;PERSIST SECURITY INFO=True;USER ID=NAII");
+            optionsBuilder.UseOracle(@"DATA SOURCE=hello:1521/prfd1;PASSWORD=hello;PERSIST SECURITY INFO=True;USER ID=NAII");            
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
